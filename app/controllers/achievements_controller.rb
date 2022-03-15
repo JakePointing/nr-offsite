@@ -3,9 +3,9 @@ class AchievementsController < ApplicationController
     @achievement = Achievement.new(achievement_params)
     if @achievement.save
       flash[:notice] = "Success"
+      redirect_to @achievement.individual
     else
-      flash[:warn] = "Success"
-      render :form
+      flash[:warn] = "Something went wrong"
     end
   end
 
@@ -15,6 +15,6 @@ class AchievementsController < ApplicationController
   private 
 
   def achievement_params
-    params.require(:acheivement).permit(:description)
+    params.require(:achievement).permit(:description, :individual_id)
   end
 end
