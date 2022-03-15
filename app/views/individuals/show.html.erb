@@ -1,23 +1,32 @@
 <div class="individual-container d-flex">
   <div class="side-bar">
     <div class="side-bar-card">
+      <br>
       <h4><%= @individual.name %></h4>
       <br>
       <span><%= @individual.title %></span>
     </div>
   </div>
   <div class="individual">
-    <%= @individual.name %>
-      <%= @individual.title %>
-      <%= @individual.location %>
-      <%= @individual.description %>
 
-      <h2<%= @individual.name %>>'s experience</h2>
-      <% @individual.role_helds.each do |role_held| %>
-        <div class="org-card">
-          <%= role_held.organisation %>
-        </div>
-      <% end %>
+    <div class="greates-achievements">
+      <ul>
+        <% @achievements.each do |achievement| %>
+          <li><%= achievement.description %></li>
+        <% end %>
+      </ul>
+      <%= render 'achievements/form', achievement: @achievement %>
+    </div>
+    <%= @individual.name %>
+    <%= @individual.title %>
+    <%= @individual.location %>
+    <%= @individual.description %>
+
+    <h2<%= @individual.name %>>'s experience</h2>
+    <% @individual.role_helds.each do |role_held| %>
+      <div class="org-card">
+        <%= role_held.organisation %>
+      </div>
+    <% end %>
   </div>
 </div>
-

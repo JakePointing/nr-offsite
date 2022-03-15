@@ -1,0 +1,4 @@
+<%= simple_form_for   achievement do |f| %>
+  <%= f.input :individual, as: :hidden, :input_html => { :value => @individual.id } %>
+  <%= f.input :description %>
+<% end %>

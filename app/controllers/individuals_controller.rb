@@ -2,6 +2,7 @@ class IndividualsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :show, :edit ]
   before_action :set_individual, only: [ :show, :edit, :update ]
   def show
+    @achievement = Achievement.new
   end
 
   def edit
@@ -21,6 +22,7 @@ class IndividualsController < ApplicationController
 
   def set_individual
     @individual = Individual.find(params[:id])
+    @achievements = @individual.achievements
   end
 
   def individual_params
