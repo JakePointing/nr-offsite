@@ -19,6 +19,22 @@ inds = [
   }
 ]
 
+
+
+
 inds.each do |data|
-  Individual.create(data)
+  individual = Individual.create(data)
+  (2..5).to_a.sample.times do 
+    role_held = {
+      start_date: Faker::Time.between(from: DateTime.now - 20.year, to: DateTime.now - 10.year),
+      end_date: Faker::Time.between(from: DateTime.now - 20.year, to: DateTime.now - 10.year),
+      organisation: Faker::Company.name,
+      position: Faker::Company.profession,
+      size: [10000000, 15000000, 20000000].sample,
+      ownership: Faker::Company.type,
+      sector: Faker::Company.industry,
+      individual: individual
+    }
+    RoleHeld.create(role_held)
+  end
 end

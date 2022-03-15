@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @individuals = Individual.all
   end
+
+  def list
+    @individuals = Individual.all
+  end
 end

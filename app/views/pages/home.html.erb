@@ -1,42 +1,24 @@
-<div class="container">
-  <h2>List of profiles we have selected for you</h2>
 
-  <div class="cards">
-    <% @individuals.each do |individual| %>
-      <%= link_to individual_path(individual) do %>
-        <div class="card">
-          <div class="d-flex justify-content-between">
-            <div class="left">
-              <%= individual.name %>
-              <%= individual.title %>
-            </div>
-            <div class="right">
-              <div class="btn btn-secondary">
-                like
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
+<div class="page-top">
+  <h2>Profiles we have selected for you</h2>
+  <span>Select the profiles that you’d like to see in your shortlist</span>
 </div>
 
-<style>
-
-  .card {
-    box-shadow: 0px 6px 16px rgba(118, 116, 113, 0.1);
-    margin-bottom: 16px;
-    padding: 32px;
-    background: #FAF4EB;
-    border: none !important;
-  }
-
-  .cards {
-    padding: 0 32px;
-  }
-  .container {
-    background: white;
-    height: 100vh;
-  }
-</style>
+<div class="cards">
+  <% @individuals.each do |individual| %>
+    <%= link_to individual_path(individual) do %>
+      <div class="card">
+        <div class="d-flex justify-content-between">
+          <div class="left">
+            <%= individual.name %>
+            <br>
+            <span><%= individual.title %></span>
+          </div>
+          <div class="right">
+            <i class="fa-solid fa-thumbs-up"></i>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
