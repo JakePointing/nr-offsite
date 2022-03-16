@@ -1,9 +1,27 @@
 <div class="org-card">
-  <%= role_held.start_date %> - <%= role_held.end_date %>
-  <br>
-  <%= role_held.position %>
-  <br>
-  <%= role_held.organisation %>   
-  <br>     
-  <%= role_held.sector %> - <%= role_held.size %> - <%= role_held.ownership %>
+  <% if role_held.logo.attached? %>
+    <div class="logo">
+      <img/>
+    </div>
+  <% else %>
+    <div class="logo">
+      <img src="https://slcsolicitors.com/wp-content/uploads/2017/02/vendor-placeholder-logo.png"/>
+    </div>
+  <% end %>
+  <div class="content">
+    <p class="duration">
+      <%= role_held.start_date.strftime("%^b %Y") %> - <%= role_held.end_date.strftime("%^b %Y") %>
+    </p>
+    <p class="position">
+      <%= role_held.position.titleize %>
+    </p>
+    <p class="organisation-name">
+      <%= role_held.organisation %>   
+    </p>
+    <div class="organisation-metrics">
+      <span><p><%= role_held.sector %></p></span>
+      <span><p><%= role_held.size %></p></span>
+      <span><p><%= role_held.ownership %></p></span>
+    </div>    
+  </div> 
 </div>
