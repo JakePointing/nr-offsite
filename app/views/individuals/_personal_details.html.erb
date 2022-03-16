@@ -1,4 +1,8 @@
-<img src='https://cdn.shopify.com/s/files/1/2283/2295/products/SICAT090_CARSTICKER_1024x1024.jpg?v=1630577926' class='individual-photo'>
+<% if individual.photo.attached? %>
+  <%= cl_image_tag individual.photo.key, class: 'individual-photo'%>
+<% else %>
+  <i class="fa-solid fa-user no-photo"></i>
+<% end%>
 <br>
 <div class='individual-bio'>
   <h4><%= individual.name %></h4>
