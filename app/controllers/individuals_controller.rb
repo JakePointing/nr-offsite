@@ -1,5 +1,5 @@
 class IndividualsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :show, :edit ]
+  skip_before_action :authenticate_user!
   before_action :set_individual, only: [ :show, :edit, :update ]
   def show
     @achievement = Achievement.new

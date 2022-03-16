@@ -1,4 +1,5 @@
 class AchievementsController < ApplicationController
+  skip_before_action :authenticate_user!
   def create
     @achievement = Achievement.new(achievement_params)
     if @achievement.save

@@ -10,7 +10,7 @@
   <% end %>
   <div class="content">
     <p class="duration">
-      <%= role_held.start_date.strftime("%^b %Y") %> - <%= role_held.end_date.strftime("%^b %Y") %>
+      <%= role_held.start_date.strftime("%^b %Y") %> - <%= role_held.end_date ? role_held.end_date.strftime("%^b %Y") : "today" %>
     </p>
     <p class="position">
       <%= role_held.position.titleize %>
