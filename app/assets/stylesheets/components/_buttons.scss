@@ -10,9 +10,21 @@
 .btn-nurole-edit {
   background: $green;
   color: white;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-color: rgba(60, 105, 85, var(--tw-border-opacity));
   &:hover,
   &:visited {
     color: white;
+  }
+
+  i{
+    margin-left: 5px;
+    font-size: 14px;
   }
 }
 
