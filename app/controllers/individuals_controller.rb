@@ -26,6 +26,6 @@ class IndividualsController < ApplicationController
   end
 
   def individual_params
-    params.require(:individual).permit(:name, :title, :location, :description)
+    params.require(:individual).permit(:name, :title, :location, :description, :permission)
   end
 end

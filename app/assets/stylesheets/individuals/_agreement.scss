@@ -1,0 +1,65 @@
+.header{
+    position: static;
+    width: 736px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+    
+    /* desktop/copy-emphasis */
+    
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 31px;
+    /* identical to box height, or 141% */
+    
+    
+    /* Grey/900 */
+    
+    color: #242726;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+.agreement-text{
+    position: static;
+    width: 736px;
+    height: 104px;
+    left: 0px;
+    top: 39px;
+
+    /* desktop/copy */
+
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    /* or 144% */
+
+
+    /* Grey/900 */
+
+    color: #242726;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+.toggle-open-profile{
+
+}
