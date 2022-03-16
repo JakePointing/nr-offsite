@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/assets/SourceSansPro-Regular.ttf) format("truetype");
+}
+
+.org-card {
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  $logoSize: 70px;
+  $padding: 5px;
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 4.615385055541992px 12.307693481445312px 0px #7674711a;
+  max-height: calc(#{$logoSize} + (#{$padding} * 2));
+  img {
+    height: $logoSize;
+    width: $logoSize;
+    min-height: $logoSize;
+    min-width: $logoSize;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.duration {
+  /* divider */
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  /* Grey/900 */
+
+  color: #88908e;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.position {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  /* identical to box height, or 144% */
+
+  /* Grey/900 */
+
+  color: #242726;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 4px 0px;
+}
+.organisation-name {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  /* identical to box height, or 144% */
+
+  /* Grey/900 */
+
+  color: #242726;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 4px 0px;
+}
+.organisation-metrics {
+  /* tags */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: static;
+  width: 530px;
+  height: 30px;
+  left: 0px;
+  top: 64px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 8px 0px;
+  span {
+    /* org-tags */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px 8px;
+
+    position: static;
+    height: 30px;
+    left: 143px;
+    top: 0px;
+
+    /* Sage/50 */
+
+    background: #f5faf7;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 8px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  p {
+    /* desktop/nudging */
+
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height, or 138% */
+
+    letter-spacing: 0.02em;
+
+    /* Grey/900 */
+
+    color: #242726;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+  }
+}
