@@ -19,11 +19,11 @@
   padding: 32px;
 }
 .side-bar {
-  width: 30%;
+  width: 34%;
   background: $beige;
 }
 .individual {
-  width: 70%;
+  width: 66%;
   padding: 80px;
 }
 
@@ -33,4 +33,30 @@
 }
 .side-bar-card {
   margin: 16px;
+  padding-left: 50px;
+  padding-top: 50px;
+
+  .individual-photo{
+    max-height: 275px;
+  }
+
+  .no-photo{
+    color: $green;
+    border: 1px solid;
+    font-size: 180px;
+    padding: 10px;
+  }
+
+  .individual-bio{
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .individual-location{
+    border-top: 1px solid #E3DDD4;
+    border-bottom: 1px solid #E3DDD4;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
+

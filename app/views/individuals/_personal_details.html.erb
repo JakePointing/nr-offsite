@@ -1,4 +1,16 @@
+<% if individual.photo.attached? %>
+  <%= cl_image_tag individual.photo.key, class: 'individual-photo'%>
+<% else %>
+  <i class="fa-solid fa-user no-photo"></i>
+<% end%>
 <br>
-<h4><%= individual.name %></h4>
-<br>
-<span><%= individual.title %></span>
+<div class='individual-bio'>
+  <h4><%= individual.name %></h4>
+  <span><%= individual.title %></span>
+</div>
+<div class='individual-location'>
+  <i class="fa-solid fa-location-dot"></i>
+  <span><%= individual.location%></span>
+</div>
+<div class='individual-capacity'>
+</div>
