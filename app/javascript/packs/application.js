@@ -28,3 +28,10 @@ achievements.forEach(achievement =>{
     achievement.classList.add("d-none")
   })
 })
+
+const addAchievement = document.getElementById("add-achievement")
+const button = addAchievement.querySelector(".form-toggle")
+const newAddAchievement = document.getElementById("new-achievement-form")
+button.addEventListener("click", () => {
+  newAddAchievement.classList.toggle("d-none")
+})

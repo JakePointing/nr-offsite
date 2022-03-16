@@ -1,0 +1,36 @@
+.btn-nurole-primary {
+  background: $red;
+  color: white;
+  &:hover,
+  &:visited {
+    color: white;
+  }
+}
+
+.btn-nurole-edit {
+  background: $green;
+  color: white;
+  &:hover,
+  &:visited {
+    color: white;
+  }
+}
+
+.btn-nurole-delete {
+  background: $beige;
+  border: 1px $green solid;
+  color: $green;
+  &:hover,
+  &:visited {
+    color: $green;
+  }
+}
+.nurole-link {
+  padding: 3px 12px;
+  border-radius: 32px;
+  width: 100px;
+  height: 32px;
+  text-align: center;
+  align-items: center;
+  // display: flex;
+}

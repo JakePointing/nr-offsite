@@ -2,20 +2,22 @@ class AchievementsController < ApplicationController
   def create
     @achievement = Achievement.new(achievement_params)
     if @achievement.save
-      flash[:notice] = "Success"
+      flash[:notice] = "Successfully updated Achievement"
       redirect_back(fallback_location: root_path)
     else
       flash[:warn] = "Something went wrong"
+      redirect_back(fallback_location: root_path)
     end
   end
 
   def update
     @achievement = Achievement.find(params[:id])
     if @achievement.update(achievement_params)
-      flash[:notice] = "Success"
+      flash[:notice] = "Successfully updated Achievement"
       redirect_back(fallback_location: root_path)
     else
       flash[:warn] = "Something went wrong"
+      redirect_back(fallback_location: root_path)
     end
   end
 
