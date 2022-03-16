@@ -6,6 +6,7 @@
 .org-card {
   display: flex;
   flex-direction: row;
+  min-width: 100%;
 }
 .logo {
   $logoSize: 70px;
@@ -15,6 +16,7 @@
   border-radius: 5px;
   box-shadow: 0px 4.615385055541992px 12.307693481445312px 0px #7674711a;
   max-height: calc(#{$logoSize} + (#{$padding} * 2));
+  flex-grow: 0;
   img {
     height: $logoSize;
     width: $logoSize;
@@ -25,6 +27,7 @@
 .content {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 .duration {
   /* divider */
@@ -47,9 +50,6 @@
 
   /* Inside auto layout */
 
-  flex: none;
-  order: 0;
-  align-self: stretch;
   flex-grow: 0;
   margin: 8px 0px;
 }
@@ -67,9 +67,6 @@
 
   /* Inside auto layout */
 
-  flex: none;
-  order: 0;
-  align-self: stretch;
   flex-grow: 0;
   margin: 4px 0px;
 }
@@ -87,9 +84,6 @@
 
   /* Inside auto layout */
 
-  flex: none;
-  order: 0;
-  align-self: stretch;
   flex-grow: 0;
   margin: 4px 0px;
 }
@@ -102,12 +96,6 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-
-  position: static;
-  width: 530px;
-  height: 30px;
-  left: 0px;
-  top: 64px;
 
   /* Inside auto layout */
 
@@ -168,5 +156,83 @@
     order: 0;
     flex-grow: 0;
     margin: 0px 10px;
+  }
+}
+.actions {
+  /* actions */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-grow: 0;
+  padding: 0px;
+
+  /* Inside auto layout */
+  margin: 0px 16px;
+
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
+  .edit {
+    /* CTA */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+
+    /* Sage/600 */
+
+    background: #3c6955;
+    border-radius: 15px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 8px;
+
+    color: white;
+
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  .delete {
+    /* CTA */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+
+    /* Red/600 */
+
+    border: 1px solid #e42311;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
   }
 }
