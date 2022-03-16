@@ -36,27 +36,68 @@
   padding-left: 50px;
   padding-top: 50px;
 
-  .individual-photo{
+  .individual-photo {
     max-height: 275px;
   }
 
-  .no-photo{
+  .no-photo {
     color: $green;
     border: 1px solid;
     font-size: 180px;
     padding: 10px;
   }
 
-  .individual-bio{
+  .individual-bio {
     padding-top: 25px;
     padding-bottom: 25px;
   }
 
-  .individual-location{
-    border-top: 1px solid #E3DDD4;
-    border-bottom: 1px solid #E3DDD4;
+  .individual-location {
+    border-top: 1px solid #e3ddd4;
+    border-bottom: 1px solid #e3ddd4;
     padding-top: 25px;
     padding-bottom: 25px;
   }
 }
 
+.roles-held {
+  /* list */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  /* Grey/White */
+
+  background: #ffffff;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  margin: 88px 0px;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+}
+.role-held {
+}
+.divider {
+  /* Divider lines */
+  margin: 8px 0px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 32px 0px;
+
+  color: #c9c9c9;
+}
