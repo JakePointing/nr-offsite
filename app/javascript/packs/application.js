@@ -14,3 +14,17 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+
+
+const achievements = document.querySelectorAll(".achievement")
+achievements.forEach(achievement =>{
+  let link = achievement.querySelector(".links")
+  link.addEventListener("click", () => {
+    let id = link.dataset.achievementId
+    const form = Array.from(document.querySelectorAll(".form")).find(form => form.dataset.achievementId === id)
+    console.log(id)
+    console.log(form)
+    form.classList.remove("d-none")
+    achievement.classList.add("d-none")
+  })
+})
