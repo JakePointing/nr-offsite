@@ -6,9 +6,7 @@
   </div>
   <div class="individual">
 
-    <div class="greatest-achievements">
-      <%= render 'greatest_achievements', achievements: @achievements, achievement: @achievement %>
-    </div>
+    <%= render 'greatest_achievements', achievements: @achievements, achievement: @achievement %>
 
     <h2><%= @individual.name %>'s experience</h2>
     <% @individual.role_helds.each do |role_held| %>

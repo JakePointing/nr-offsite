@@ -1,7 +1,9 @@
-Greatest Achievements
-<ul>
-  <% @achievements.each do |achievement| %>
-    <li><%= achievement.description %></li>
-  <% end %>
-</ul>
-<%= render 'achievements/form', achievement: achievement %>
+<div class="greatest-achievements">
+  <span class="header">Greatest Achievements</span>
+  <ul>
+    <% @achievements.each do |achievement| %>
+      <li><%= achievement.description %><%= link_to "x", achievement_path(achievement), method: :delete, class: "delete-link" %></li>
+    <% end %>
+  </ul>
+  <%= render 'achievements/form', achievement: achievement %>
+</div>

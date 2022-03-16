@@ -1,0 +1,22 @@
+.greatest-achievements {
+  border-top: 2px $red solid;
+  color: $red;
+  .header {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+  }
+
+  li {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    position: relative;
+  }
+
+  .delete-link {
+    position: absolute;
+    right: 0px;
+  }
+}
