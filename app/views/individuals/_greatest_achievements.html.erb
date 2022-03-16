@@ -1,9 +1,15 @@
 <div class="greatest-achievements">
-  <span class="header">Greatest Achievements</span>
+  <div class="header">Greatest Achievements</div>
   <ul>
     <% @achievements.each do |achievement| %>
-      <li><%= achievement.description %><%= link_to "x", achievement_path(achievement), method: :delete, class: "delete-link" %></li>
+      <li class="achievement">
+        <%= achievement.description %><div class="links edit-link" data-achievement-id="<%= achievement.id %>">edit</div>
+        <%= link_to "x", achievement_path(achievement), method: :delete, class: "links delete-link"%>
+      </li>
+      <li class="d-none form" data-achievement-id="<%= achievement.id %>"><%= render 'achievements/form', achievement: achievement %></li>
     <% end %>
   </ul>
-  <%= render 'achievements/form', achievement: achievement %>
+  <div class="add-achievement">
+    <%= render 'achievements/form', achievement: Achievement.new %>
+  </div>
 </div>

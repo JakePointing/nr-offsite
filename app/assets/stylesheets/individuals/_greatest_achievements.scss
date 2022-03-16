@@ -1,22 +1,42 @@
 .greatest-achievements {
-  border-top: 2px $red solid;
+  border-top: 5px $red solid;
   color: $red;
   .header {
+    margin: 24px 0 0 0;
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
   }
 
-  li {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 26px;
-    position: relative;
+  ul {
+    margin: 16px 0 0 0;
+    li {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+      position: relative;
+      &:hover {
+        .links {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .links {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .delete-link {
     position: absolute;
     right: 0px;
+  }
+
+  .edit-link {
+    position: absolute;
+    right: 20px;
+    top: 0px;
   }
 }
