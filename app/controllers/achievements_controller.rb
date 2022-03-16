@@ -12,6 +12,12 @@ class AchievementsController < ApplicationController
   def update
   end
 
+  def destroy
+    @achievement = Achievement.find(params[:id])
+    @achievement.destroy
+    redirect_back(fallback_location: root_path)
+  end
+
   private 
 
   def achievement_params
