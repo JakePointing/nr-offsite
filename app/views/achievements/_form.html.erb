@@ -1,5 +1,5 @@
 <%= simple_form_for achievement do |f| %>
   <%= f.input :individual_id, as: :hidden, :input_html => { :value => @individual.id } %>
   <%= f.input :description, label: false %>
-  <%= f.submit "#{achievement.new_record? ? "Create" : "Update"}"%>
+  <%= f.submit "#{achievement.new_record? ? "Add Achievement" : "Update"}", class: "btn btn-nurole-primary"%>
 <% end %>
