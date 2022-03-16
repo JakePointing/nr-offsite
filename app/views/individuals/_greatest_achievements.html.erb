@@ -1,0 +1,7 @@
+Greatest Achievements
+<ul>
+  <% @achievements.each do |achievement| %>
+    <li><%= achievement.description %></li>
+  <% end %>
+</ul>
+<%= render 'achievements/form', achievement: achievement %>
