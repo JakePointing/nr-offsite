@@ -19,12 +19,12 @@
   padding: 32px;
 }
 .side-bar {
-  width: 29%;
+  width: 34%;
   margin-right: 1%;
   background: $beige;
 }
 .individual {
-  width: 69%;
+  width: 66%;
   margin-left: 1%;
 }
 
@@ -34,4 +34,23 @@
 }
 .side-bar-card {
   margin: 16px;
+  padding-left: 50px;
+  padding-top: 50px;
+
+  .individual-photo{
+    max-height: 275px;
+  }
+
+  .individual-bio{
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .individual-location{
+    border-top: 1px solid #E3DDD4;
+    border-bottom: 1px solid #E3DDD4;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
+

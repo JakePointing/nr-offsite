@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $green;
+  height: 5rem;
+  padding-left: 48px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,6 +13,3 @@
   color: white !important;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
