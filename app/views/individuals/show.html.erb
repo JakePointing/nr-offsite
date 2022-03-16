@@ -8,9 +8,14 @@
 
     <%= render 'greatest_achievements', achievements: @achievements, achievement: @achievement %>
 
-    <h2><%= @individual.name %>'s experience</h2>
-    <% @individual.role_helds.each do |role_held| %>
-      <%= render 'organisation_card', role_held: role_held %>
-    <% end %>
+    <div class="roles-held">
+      <h2><%= @individual.name %>'s experience</h2>
+      <% @individual.role_helds.each do |role_held| %>
+        <div class="role-held">
+          <%= render 'organisation_card', role_held: role_held %>
+        </div>
+        <hr class="divider">
+      <% end %>
+    </div>
   </div>
 </div>
